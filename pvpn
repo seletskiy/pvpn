@@ -86,6 +86,7 @@ do_args() {
                 shift;;
             -s|--first-ssh-hop)
                 ssh_ip="$(dig +short $2)"
+                ssh_ip="${ssh_ip:-$2}"
                 shift;;
 	    -p|--ssh-port)
 		ssh_port="$2"
